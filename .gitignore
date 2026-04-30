@@ -19,3 +19,15 @@ wheels/
 # Environment files
 .env
 .env.*
+
+# IDE
+.vscode/
+
+# Test cache
+.pytest_cache/
+
+# Data files
+*.csv
+*.parquet
+*.db
+*.sqlite
