@@ -53,11 +53,16 @@ Complexity:
 class _Node:
     __slots__ = ("key", "val", "prev", "next")
 
+    key: int
+    val: int
+    prev: "_Node | None"
+    next: "_Node | None"
+
     def __init__(self, key: int = 0, val: int = 0) -> None:
         self.key = key
         self.val = val
-        self.prev: "_Node | None" = None
-        self.next: "_Node | None" = None
+        self.prev = None
+        self.next = None
 
 
 class LRUCache:
