@@ -13,9 +13,9 @@ class TestLRUCache:
         cache2.put(1, 1)
         cache2.put(2, 2)
         assert cache2.get(1) == 1
-        cache2.put(3, 3)       # evicts key 2
+        cache2.put(3, 3)  # evicts key 2
         assert cache2.get(2) == -1
-        cache2.put(4, 4)       # evicts key 1
+        cache2.put(4, 4)  # evicts key 1
         assert cache2.get(1) == -1
         assert cache2.get(3) == 3
         assert cache2.get(4) == 4
@@ -31,8 +31,8 @@ class TestLRUCache:
     def test_update_moves_to_front(self, cache2):
         cache2.put(1, 1)
         cache2.put(2, 2)
-        cache2.put(1, 100)     # update key 1 → moves to MRU
-        cache2.put(3, 3)       # evicts key 2 (LRU), not key 1
+        cache2.put(1, 100)  # update key 1 → moves to MRU
+        cache2.put(3, 3)  # evicts key 2 (LRU), not key 1
         assert cache2.get(1) == 100
         assert cache2.get(2) == -1
         assert cache2.get(3) == 3
@@ -40,8 +40,8 @@ class TestLRUCache:
     def test_get_refreshes_recency(self, cache2):
         cache2.put(1, 1)
         cache2.put(2, 2)
-        cache2.get(1)          # 1 is now MRU; 2 becomes LRU
-        cache2.put(3, 3)       # evicts key 2
+        cache2.get(1)  # 1 is now MRU; 2 becomes LRU
+        cache2.put(3, 3)  # evicts key 2
         assert cache2.get(1) == 1
         assert cache2.get(2) == -1
         assert cache2.get(3) == 3
@@ -50,7 +50,7 @@ class TestLRUCache:
         cache = LRUCache(1)
         cache.put(1, 1)
         assert cache.get(1) == 1
-        cache.put(2, 2)        # evicts key 1
+        cache.put(2, 2)  # evicts key 1
         assert cache.get(1) == -1
         assert cache.get(2) == 2
 
@@ -63,8 +63,8 @@ class TestLRUCache:
     def test_overwrite_does_not_grow_cache(self, cache2):
         cache2.put(1, 1)
         cache2.put(2, 2)
-        cache2.put(1, 99)      # overwrite, must not push count to 3
-        cache2.put(3, 3)       # evicts LRU (key 2), not a third slot
+        cache2.put(1, 99)  # overwrite, must not push count to 3
+        cache2.put(3, 3)  # evicts LRU (key 2), not a third slot
         assert cache2.get(1) == 99
         assert cache2.get(2) == -1
         assert cache2.get(3) == 3

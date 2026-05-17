@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from collections import deque
-from typing import Optional
 
 import pytest
 
@@ -12,7 +11,7 @@ from leetcode.utils import ListNode, TreeNode
 def make_list():
     """Build a singly-linked list from a Python list of values."""
 
-    def _build(vals: list[int]) -> Optional[ListNode]:
+    def _build(vals: list[int]) -> ListNode | None:
         if not vals:
             return None
         head = ListNode(vals[0])
@@ -29,7 +28,7 @@ def make_list():
 def list_to_vals():
     """Flatten a singly-linked list to a Python list."""
 
-    def _flatten(head: Optional[ListNode]) -> list[int]:
+    def _flatten(head: ListNode | None) -> list[int]:
         result: list[int] = []
         while head:
             result.append(head.val)
@@ -48,7 +47,7 @@ def make_tree():
     Example: [1, 2, 3, None, 5]  →  root=1, left=2(right=5), right=3
     """
 
-    def _build(vals: list[int | None]) -> Optional[TreeNode]:
+    def _build(vals: list[int | None]) -> TreeNode | None:
         if not vals or vals[0] is None:
             return None
         root = TreeNode(vals[0])
@@ -73,11 +72,11 @@ def make_tree():
 def tree_to_vals():
     """Serialize a binary tree to a level-order list (trailing Nones stripped)."""
 
-    def _serialize(root: Optional[TreeNode]) -> list[int | None]:
+    def _serialize(root: TreeNode | None) -> list[int | None]:
         if root is None:
             return []
         result: list[int | None] = []
-        queue: deque[Optional[TreeNode]] = deque([root])
+        queue: deque[TreeNode | None] = deque([root])
         while queue:
             node = queue.popleft()
             if node is None:

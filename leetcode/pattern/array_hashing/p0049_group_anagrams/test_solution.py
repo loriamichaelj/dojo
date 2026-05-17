@@ -26,7 +26,11 @@ class TestGroupAnagrams:
 
     def test_all_unique(self, sol):
         result = sol.groupAnagrams(["abc", "def", "ghi"])
-        assert normalize(result) == {frozenset(["abc"]), frozenset(["def"]), frozenset(["ghi"])}
+        assert normalize(result) == {
+            frozenset(["abc"]),
+            frozenset(["def"]),
+            frozenset(["ghi"]),
+        }
 
     def test_all_same_anagram(self, sol):
         result = sol.groupAnagrams(["abc", "bca", "cab"])
