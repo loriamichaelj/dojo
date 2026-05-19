@@ -1,10 +1,21 @@
 from __future__ import annotations
 
+import pathlib
 from collections import deque
 
 import pytest
 
 from leetcode.utils import ListNode, TreeNode
+
+
+def pytest_configure(config):
+    # Ensure every problem directory that contains solution.py is a package,
+    # so relative imports in test_solution.py work without manual __init__.py.
+    root = pathlib.Path(__file__).parent
+    for solution in root.rglob("solution.py"):
+        init = solution.parent / "__init__.py"
+        if not init.exists():
+            init.touch()
 
 
 @pytest.fixture
