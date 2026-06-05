@@ -35,6 +35,4 @@ Complexity:
 
 class Solution:
     def maxProfit(self, prices: list[int]) -> int:
-        return sum(
-            max(0, prices[i] - prices[i - 1]) for i in range(1, len(prices))
-        )
+        return sum(max(0, prices[i] - prices[i - 1]) for i in range(1, len(prices)))
