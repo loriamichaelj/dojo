@@ -1,0 +1,74 @@
+site_name: Dojo
+site_description: One-year structured learning log — quantitative developer / researcher readiness.
+site_url: https://loriamichaelj.github.io/dojo/
+repo_url: https://github.com/loriamichaelj/dojo
+repo_name: loriamichaelj/dojo
+edit_uri: edit/main/
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+    - search.suggest
+    - toc.follow
+
+# Notes are included from the repo and link to source files (CLAUDE.md,
+# workflow configs, sibling research folders) that aren't published pages.
+# Keep strict mode for real structural problems, but don't fail on those.
+validation:
+  omitted_files: warn
+  absolute_links: info
+  unrecognized_links: info
+  links:
+    not_found: info
+
+plugins:
+  - search
+  - include-markdown
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+
+nav:
+  - Home: index.md
+  - Overview: overview.md
+  - Research:
+      - research/index.md
+      - AI / ML: research/ai.md
+      - DeFi: research/defi.md
+      - Quantitative Analysis: research/quant.md
+      - Strategy Development: research/strategy.md
+      - Math: research/math.md
+      - Macro & Game Theory: research/macro-game.md
+  - Reference:
+      - SSH GitHub Setup: reference/ssh-github-setup.md
+  - Contributing: contributing.md

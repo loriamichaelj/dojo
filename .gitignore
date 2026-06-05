@@ -26,6 +26,10 @@ wheels/
 # Test cache
 .pytest_cache/
 
+# MkDocs build output
+site/
+.cache/
+
 # Data files
 *.csv
 *.parquet
