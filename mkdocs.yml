@@ -68,6 +68,4 @@ nav:
       - Strategy Development: research/strategy.md
       - Math: research/math.md
       - Macro & Game Theory: research/macro-game.md
-  - Reference:
-      - SSH GitHub Setup: reference/ssh-github-setup.md
   - Contributing: contributing.md

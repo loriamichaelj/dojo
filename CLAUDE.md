@@ -33,7 +33,6 @@ leetcode/
         solution.py
         test_solution.py
 research/               # research notes by domain (AI, DeFi, quant, strategy, math, macro, game theory)
-reference/              # cheatsheets
 projects/               # capstone / end-to-end quant projects (planned)
 ```
 

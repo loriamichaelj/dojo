@@ -7,7 +7,6 @@ on:
     paths:
       - "docs/**"
       - "research/**"
-      - "reference/**"
       - "mkdocs.yml"
       - "README.md"
       - "CONTRIBUTING.md"

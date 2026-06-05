@@ -1,9 +1,9 @@
 # Research
 
 A workspace for exploration, notes, and discussion across quantitative and strategic
-topics. Unlike `leetcode/` (drilled problems) or `reference/` (settled cheatsheets), this
+topics. Unlike `leetcode/` (drilled problems), this
 is where ideas are **worked out** — derivations, experiments, half-formed arguments, and
-write-ups that may later graduate into `reference/` or `projects/`.
+write-ups that may later graduate into `projects/`.
 
 ## Topics
 
@@ -26,8 +26,7 @@ write-ups that may later graduate into `reference/` or `projects/`.
 - Math renders in GitHub-flavored markdown via `$...$` (inline) and `$$...$$` (block).
 - Notebooks follow the repo convention: store as jupytext `.py` (percent format), not
   `.ipynb`.
-- When a note becomes settled/reusable, promote it: cheatsheets → `reference/`, full
-  builds → `projects/`.
+- When a note becomes settled/reusable, promote it into a full build under `projects/`.
 
 ## Cross-cutting questions
 

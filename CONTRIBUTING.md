@@ -32,7 +32,7 @@ Two workflows handle the "CD" half of the pipeline.
 markdown and publishes it to **GitHub Pages** on every push to `main` that touches
 docs-relevant files (and on manual `workflow_dispatch`). The site is single-sourced:
 pages under `docs/` use the `include-markdown` plugin to pull in the existing
-`README.md`, `research/`, and `reference/` notes, so there's nothing to
+`README.md` and `research/` notes, so there's nothing to
 keep in sync by hand. The build runs `mkdocs build --strict`, so a structural problem
 fails the deploy.
 

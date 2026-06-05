@@ -3,7 +3,7 @@
 > **Claim:** A working quant/ML practitioner needs fluency in a small set of recurring
 > ideas — how learning is framed, how models generalize, how they're trained, and how
 > they're evaluated. Everything else is a specialization of these. This is a living map,
-> not a textbook; promote settled pieces to [`../../reference/`](../../reference/).
+> not a textbook.
 
 **Pairs with:** [`../math/`](../math/) (linear algebra, calculus, probability,
 optimization) and [`../quantitative-analysis/`](../quantitative-analysis/) (validation
