@@ -1,0 +1,34 @@
+# Dependabot keeps dependencies current with automated PRs.
+# https://docs.github.com/code-security/dependabot/dependabot-version-updates
+version: 2
+updates:
+  # GitHub Actions used in .github/workflows/
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "ci"
+    labels:
+      - "dependencies"
+      - "github-actions"
+    groups:
+      # One PR per week for all action bumps instead of one per action.
+      actions:
+        patterns:
+          - "*"
+
+  # Python dependencies managed by uv (pyproject.toml + uv.lock)
+  - package-ecosystem: "uv"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "deps"
+    labels:
+      - "dependencies"
+      - "python"
+    groups:
+      # Batch dev tooling (ruff, pytest) together; keep app deps separate.
+      dev-dependencies:
+        dependency-type: "development"
