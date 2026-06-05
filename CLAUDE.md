@@ -1,7 +1,5 @@
 # Dojo
 
-One-year structured learning repo targeting quantitative developer / researcher readiness.
-
 ## Curriculum domains
 
 1. **CS Fundamentals** — algorithms, data structures, daily LeetCode
