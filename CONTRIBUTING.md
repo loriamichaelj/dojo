@@ -21,6 +21,49 @@ request to `main`. The single `Lint & test` job (Ubuntu, Python pinned via
 `.python-version`) installs deps with `uv sync --frozen`, then runs ruff lint, ruff
 format check, and pytest. Superseded runs on the same ref are cancelled automatically.
 
+## Continuous deployment
+
+Two workflows handle the "CD" half of the pipeline.
+
+### Documentation site
+
+[`.github/workflows/docs.yml`](./.github/workflows/docs.yml) builds a
+[MkDocs Material](https://squidfunk.github.io/mkdocs-material/) site from the repo's
+markdown and publishes it to **GitHub Pages** on every push to `main` that touches
+docs-relevant files (and on manual `workflow_dispatch`). The site is single-sourced:
+pages under `docs/` use the `include-markdown` plugin to pull in the existing
+`README.md`, `OVERVIEW.md`, `research/`, and `reference/` notes, so there's nothing to
+keep in sync by hand. The build runs `mkdocs build --strict`, so a structural problem
+fails the deploy.
+
+Build and preview locally:
+
+```bash
+uv sync --frozen --only-group docs
+uv run mkdocs serve          # live preview at http://127.0.0.1:8000
+uv run mkdocs build --strict # same build CI runs
+```
+
+**One-time setup (admin only):** GitHub Pages source must be set to *GitHub Actions*.
+**Settings → Pages → Build and deployment → Source → GitHub Actions.** Until that's
+set, the `deploy` job will fail. The site publishes to
+`https://loriamichaelj.github.io/dojo/`.
+
+### Releases
+
+[`.github/workflows/release.yml`](./.github/workflows/release.yml) runs when you push a
+version tag matching `v*`. It re-runs the full CI gate (ruff lint, ruff format check,
+pytest) so a tag can only ship from a green tree, then creates a GitHub Release with
+auto-generated notes. Tags containing a hyphen (e.g. `v0.2.0-rc1`) are marked as
+pre-releases.
+
+Cut a release:
+
+```bash
+git tag v0.2.0
+git push origin v0.2.0
+```
+
 ## Dependency updates
 
 [`.github/dependabot.yml`](./.github/dependabot.yml) opens grouped version-update PRs

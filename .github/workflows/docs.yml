@@ -1,0 +1,71 @@
+name: Deploy docs
+
+on:
+  push:
+    branches: [main]
+    # Only rebuild when something that affects the site changes.
+    paths:
+      - "docs/**"
+      - "research/**"
+      - "reference/**"
+      - "mkdocs.yml"
+      - "README.md"
+      - "OVERVIEW.md"
+      - "CONTRIBUTING.md"
+      - "pyproject.toml"
+      - "uv.lock"
+      - ".github/workflows/docs.yml"
+  # Allow manual runs from the Actions tab.
+  workflow_dispatch:
+
+# Least-privilege token, plus the scopes the Pages deploy needs.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Only one concurrent Pages deployment; don't cancel an in-flight publish.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build site
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Set up Python
+        run: uv python install
+
+      - name: Install docs dependencies
+        run: uv sync --frozen --only-group docs
+
+      - name: Build site (strict)
+        # --no-sync so `uv run` doesn't re-sync to the default groups and drop
+        # the docs-only dependencies we just installed.
+        run: uv run --no-sync mkdocs build --strict
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
