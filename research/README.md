@@ -1,4 +1,4 @@
-# Research
+# Overview
 
 A workspace for exploration, notes, and discussion across quantitative and strategic
 topics. Unlike `leetcode/` (drilled problems), this
