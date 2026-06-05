@@ -1,4 +1,4 @@
-# AI
+# AI / ML
 
 Machine learning and AI methods, and their application to research and strategy.
 
