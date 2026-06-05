@@ -10,7 +10,6 @@ on:
       - "reference/**"
       - "mkdocs.yml"
       - "README.md"
-      - "OVERVIEW.md"
       - "CONTRIBUTING.md"
       - "pyproject.toml"
       - "uv.lock"

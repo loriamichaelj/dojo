@@ -60,7 +60,6 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Overview: overview.md
   - Research:
       - research/index.md
       - AI / ML: research/ai.md
