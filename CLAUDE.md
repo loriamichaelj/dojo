@@ -35,6 +35,7 @@ leetcode/
 weekly-notes/           # weekly progress logs
 projects/               # capstone / end-to-end quant projects
 reading-notes/          # book and paper notes
+reference/              # cheatsheets
 ```
 
 ## Adding a LeetCode solution
