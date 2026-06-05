@@ -3,7 +3,7 @@
 A workspace for exploration, notes, and discussion across quantitative and strategic
 topics. Unlike `leetcode/` (drilled problems) or `reference/` (settled cheatsheets), this
 is where ideas are **worked out** — derivations, experiments, half-formed arguments, and
-write-ups that may later graduate into `reference/`, `projects/`, or `reading-notes/`.
+write-ups that may later graduate into `reference/` or `projects/`.
 
 ## Topics
 
@@ -27,7 +27,7 @@ write-ups that may later graduate into `reference/`, `projects/`, or `reading-no
 - Notebooks follow the repo convention: store as jupytext `.py` (percent format), not
   `.ipynb`.
 - When a note becomes settled/reusable, promote it: cheatsheets → `reference/`, full
-  builds → `projects/`, book & paper summaries → `reading-notes/`.
+  builds → `projects/`.
 
 ## Cross-cutting questions
 

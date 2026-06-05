@@ -1,28 +1,9 @@
 # Dojo
 
-A one-year, structured learning repository aimed at **quantitative developer / quant
-researcher** readiness. It serves as a disciplined, public record of everything built and
-learned across a week-by-week curriculum, with an emphasis on professional tooling, tested
-code, and reproducibility.
+📖 **Docs site:** <https://loriamichaelj.github.io/dojo/> (built from this repo with MkDocs Material)
 
-> See [`CLAUDE.md`](./CLAUDE.md) for the authoritative contributor conventions.
-
-## One-Year Goal
-
-I will be able to build, test, and deploy production-quality quantitative systems —
-covering the full stack from data pipelines and statistical modeling through backtesting,
-risk management, and live execution infrastructure.
-
-Concretely: ship at least one end-to-end quant project (signal research → backtest → paper
-trade) and be interview-ready for quantitative developer / quant researcher roles.
-
-## Background
-
-<!-- Edit this section with your own background -->
-
-I have experience with [relevant background — e.g., mathematics, trading, prior
-programming, etc.]. I'm using this repo as a disciplined public record of everything I
-build and learn along the way.
+> See [`CLAUDE.md`](./CLAUDE.md) for the authoritative contributor conventions and
+> [`CONTRIBUTING.md`](./CONTRIBUTING.md) for the workflow, CI, and docs-build notes.
 
 ## Curriculum Domains
 
@@ -57,15 +38,19 @@ dojo/
 │           └── p<NNNN>_<slug>/
 │               ├── solution.py        # Solution + complexity-annotated header
 │               └── test_solution.py   # Examples + edge cases
-├── research/            # Research notes (AI, DeFi, quant, macro, math, strategy)
+├── research/            # Research notes — AI/ML, DeFi, quantitative analysis,
+│                        #   strategy development, math, macro economics, game theory
 ├── reference/           # Cheatsheets and quick-reference docs
+├── docs/                # MkDocs Material site sources (include-markdown stubs)
+├── .github/workflows/   # CI (lint + tests), docs deploy, tag-based releases
+├── mkdocs.yml           # Documentation site configuration
 ├── pyproject.toml       # Project + ruff + pytest configuration
+├── CONTRIBUTING.md      # Workflow, CI, and docs-build notes
 ├── README.md            # This file — program goal, structure, conventions
 └── CLAUDE.md            # Contributor conventions (authoritative)
 ```
 
-`weekly-notes/`, `projects/`, and `reading-notes/` are part of the intended structure and
-will be populated as the program progresses.
+`projects/` is part of the intended structure and will be added as the program progresses.
 
 ## LeetCode Module — Current State
 
@@ -130,8 +115,7 @@ uv run ruff format .
 
 ## Progress
 
-Tracking weekly in [`weekly-notes/`](./weekly-notes/). Projects documented in
-[`projects/`](./projects/).
+Capstone work is documented under `projects/`, added as the curriculum progresses.
 
 ---
 
