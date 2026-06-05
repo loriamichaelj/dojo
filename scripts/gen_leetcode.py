@@ -42,9 +42,7 @@ rows: list[tuple[int, str, str, str, str]] = []
 for pattern_dir in sorted(p for p in PATTERN_ROOT.iterdir() if p.is_dir()):
     pattern_label = humanize(pattern_dir.name)
     problem_dirs = sorted(
-        d
-        for d in pattern_dir.iterdir()
-        if d.is_dir() and (d / "solution.py").exists()
+        d for d in pattern_dir.iterdir() if d.is_dir() and (d / "solution.py").exists()
     )
     for prob_dir in problem_dirs:
         dir_match = PROB_DIR_RE.match(prob_dir.name)
@@ -96,7 +94,9 @@ with mkdocs_gen_files.open("leetcode/index.md", "w") as index:
     index.write("| # | Problem | Pattern | Difficulty |\n")
     index.write("|---|---------|---------|------------|\n")
     for number, name, pattern_label, difficulty, target in sorted(rows):
-        index.write(f"| {number} | [{name}]({target}) | {pattern_label} | {difficulty} |\n")
+        index.write(
+            f"| {number} | [{name}]({target}) | {pattern_label} | {difficulty} |\n"
+        )
 
 with mkdocs_gen_files.open("leetcode/SUMMARY.md", "w") as summary:
     summary.writelines(nav.build_literate_nav())
