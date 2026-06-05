@@ -7,6 +7,8 @@ on:
     paths:
       - "docs/**"
       - "research/**"
+      - "leetcode/**"
+      - "scripts/**"
       - "mkdocs.yml"
       - "README.md"
       - "CONTRIBUTING.md"

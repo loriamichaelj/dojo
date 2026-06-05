@@ -32,9 +32,11 @@ Two workflows handle the "CD" half of the pipeline.
 markdown and publishes it to **GitHub Pages** on every push to `main` that touches
 docs-relevant files (and on manual `workflow_dispatch`). The site is single-sourced:
 pages under `docs/` use the `include-markdown` plugin to pull in the existing
-`README.md` and `research/` notes, so there's nothing to
-keep in sync by hand. The build runs `mkdocs build --strict`, so a structural problem
-fails the deploy.
+`README.md` and `research/` notes, so there's nothing to keep in sync by hand. The
+**1337** section is generated at build time by [`scripts/gen_leetcode.py`](./scripts/gen_leetcode.py)
+(via `mkdocs-gen-files` + `mkdocs-literate-nav`), which walks `leetcode/pattern/` and
+emits a page per solution — new problems appear automatically, no nav edits needed. The
+build runs `mkdocs build --strict`, so a structural problem fails the deploy.
 
 Build and preview locally:
 

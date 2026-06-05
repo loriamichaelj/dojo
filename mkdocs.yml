@@ -44,6 +44,11 @@ validation:
 plugins:
   - search
   - include-markdown
+  - gen-files:
+      scripts:
+        - scripts/gen_leetcode.py
+  - literate-nav:
+      nav_file: SUMMARY.md
 
 markdown_extensions:
   - admonition
@@ -68,4 +73,5 @@ nav:
       - Strategy Development: research/strategy.md
       - Math: research/math.md
       - Macro & Game Theory: research/macro-game.md
+  - 1337: leetcode/
   - Contributing: contributing.md
