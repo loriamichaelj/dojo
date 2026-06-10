@@ -6,6 +6,7 @@ on:
     # Only rebuild when something that affects the site changes.
     paths:
       - "docs/**"
+      - "books/**"
       - "research/**"
       - "leetcode/**"
       - "scripts/**"
