@@ -10,7 +10,7 @@
 ## Toolchain
 
 | Tool | Purpose |
-|------|---------|
+|---|---|
 | `uv` | Dependency management (not pip) |
 | `ruff` | Lint + format (line length 88, rules: E F I UP B SIM) |
 | `pytest` | Testing — run from repo root |

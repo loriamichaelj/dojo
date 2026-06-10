@@ -36,6 +36,7 @@ discipline, overfitting, multiple-testing).
 ## 2. Supervised learning — the spine
 
 ### Problem setup
+
 - Inputs $x \in \mathbb{R}^d$ (features), target $y$. Learn $f_\theta: x \mapsto \hat{y}$.
 - **Regression:** $y$ continuous. **Classification:** $y$ categorical (output class
   probabilities, not just labels).
@@ -43,6 +44,7 @@ discipline, overfitting, multiple-testing).
   **optimizer**. These three choices define almost everything.
 
 ### Loss functions
+
 - **MSE** $\frac{1}{n}\sum (y_i - \hat{y}_i)^2$ — regression; penalizes large errors,
   sensitive to outliers.
 - **MAE / Huber** — robust regression alternatives.
@@ -50,6 +52,7 @@ discipline, overfitting, multiple-testing).
 - **Loss is a modeling choice**, not a detail: it encodes what errors you care about.
 
 ### Workhorse models (know the trade-offs, not just the API)
+
 - **Linear / logistic regression** — interpretable, fast, strong baseline, assumes
   linearity. Regularize (L1/L2).
 - **Decision trees → random forests → gradient boosting (XGBoost/LightGBM)** — handle
@@ -95,6 +98,7 @@ $$\text{Error} = \underbrace{\text{Bias}^2}_{\text{too-simple}} + \underbrace{\t
 ## 5. Model evaluation (where most mistakes happen)
 
 ### Splitting
+
 - **Train / validation / test.** Train fits parameters, validation tunes
   hyperparameters, test is touched **once**. The test set is not for iterating.
 - **Cross-validation (k-fold)** for stable estimates on limited data.
@@ -103,11 +107,13 @@ $$\text{Error} = \underbrace{\text{Bias}^2}_{\text{too-simple}} + \underbrace{\t
   [`../quantitative-analysis/`](../quantitative-analysis/).)
 
 ### Leakage — the silent killer
+
 - **Data leakage:** information from the target or the future sneaks into features
   (e.g. scaling using full-dataset statistics, look-ahead features). Produces beautiful
   backtests that die live. Fit all preprocessing **inside** the training fold only.
 
 ### Metrics (match the metric to the cost)
+
 - **Regression:** RMSE, MAE, $R^2$.
 - **Classification:** accuracy is misleading under class imbalance. Use
   **precision / recall / F1**, the **confusion matrix**, **ROC-AUC** and **PR-AUC**.
@@ -217,6 +223,7 @@ a well-specified statistical model, and when does it just overfit?*
 ---
 
 ### Next threads to spin out
+
 - `bias-variance-experiments.py` — empirical decomposition on synthetic data.
 - `validation-leakage-demo.py` — how naive CV inflates a financial backtest.
 - `gradient-descent-from-scratch.py` — implement SGD/Adam to internalize the optimizer.

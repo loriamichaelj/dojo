@@ -257,6 +257,7 @@ primitives come first.
 - **Multi-agent AI** — minimax, self-play, and correlated signals → see `../ai/`.
 
 ### To expand later
+
 - [ ] Mechanism design & the revelation principle
 - [ ] Auction formats: first/second-price, revenue equivalence, VCG
 - [ ] Evolutionary game theory & ESS
@@ -265,6 +266,7 @@ primitives come first.
 ---
 
 ### References
+
 - Osborne & Rubinstein, *A Course in Game Theory*
 - Fudenberg & Tirole, *Game Theory*
 - Maschler, Solan & Zamir, *Game Theory*
