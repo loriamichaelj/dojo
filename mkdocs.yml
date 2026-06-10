@@ -48,6 +48,7 @@ plugins:
       scripts:
         - scripts/gen_leetcode.py
         - scripts/gen_research.py
+        - scripts/gen_books.py
   - literate-nav:
       nav_file: SUMMARY.md
 
@@ -73,5 +74,6 @@ extra_javascript:
 nav:
   - Home: index.md
   - Research: research/
+  - Books: books/
   - 1337: leetcode/
   - Contributing: contributing.md
