@@ -55,7 +55,9 @@ def humanize(slug: str) -> str:
 
 
 def section_sort_key(folder: str) -> tuple[int, str]:
-    rank = SECTION_ORDER.index(folder) if folder in SECTION_ORDER else len(SECTION_ORDER)
+    rank = (
+        SECTION_ORDER.index(folder) if folder in SECTION_ORDER else len(SECTION_ORDER)
+    )
     return (rank, folder)
 
 
