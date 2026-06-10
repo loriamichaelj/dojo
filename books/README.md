@@ -24,9 +24,12 @@ Each book file follows the same structure: the **title** as the H1, then
 ```markdown
 # Title
 
-- **Author:** First Last
-- **Published:** YYYY
-- **Synopsis:**
+| | |
+|---|---|
+| **Author** | First Last |
+| **Published** | YYYY |
+
+## Synopsis
 
 A few sentences summarizing what the book is about.
 ```
