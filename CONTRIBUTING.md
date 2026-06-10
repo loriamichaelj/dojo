@@ -33,12 +33,14 @@ markdown and publishes it to **GitHub Pages** on every push to `main` that touch
 docs-relevant files (and on manual `workflow_dispatch`). The site is single-sourced:
 the Home and Contributing pages under `docs/` use the `include-markdown` plugin to pull
 in `README.md` and `CONTRIBUTING.md`, so there's nothing to keep in sync by hand. The
-**Research** and **1337** sections are generated at build time by
-[`scripts/gen_research.py`](./scripts/gen_research.py) and
+**Research**, **Books**, and **1337** sections are generated at build time by
+[`scripts/gen_research.py`](./scripts/gen_research.py),
+[`scripts/gen_books.py`](./scripts/gen_books.py), and
 [`scripts/gen_leetcode.py`](./scripts/gen_leetcode.py) (via `mkdocs-gen-files` +
-`mkdocs-literate-nav`), which walk `research/` and `leetcode/pattern/` and emit a page
-per note/solution — new files appear automatically, no nav edits needed. The build runs
-`mkdocs build --strict`, so a structural problem fails the deploy.
+`mkdocs-literate-nav`), which walk `research/`, `books/`, and `leetcode/pattern/` and
+emit a page per note/book/solution — new files appear automatically, no nav edits
+needed. The build runs `mkdocs build --strict`, so a structural problem fails the
+deploy.
 
 Build and preview locally:
 

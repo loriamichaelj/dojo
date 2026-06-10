@@ -11,4 +11,3 @@ tokenomics, and protocol risk analysis.
 
 > Note the chain, protocol version, and (where relevant) block/time context — on-chain
 > mechanics change with upgrades.
-</content>

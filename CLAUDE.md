@@ -30,7 +30,8 @@ leetcode/
       p<NNNN>_<slug>/
         solution.py
         test_solution.py
-research/               # research notes by domain (AI, DeFi, quant, strategy, math, macro, game theory)
+research/               # research notes by domain (AI, DeFi, quant, strategy, math, macro, game theory, poker)
+books/                  # reading notes by shelf (fiction, non-fiction)
 projects/               # capstone / end-to-end quant projects (planned)
 ```
 

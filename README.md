@@ -38,8 +38,9 @@ dojo/
 │           └── p<NNNN>_<slug>/
 │               ├── solution.py        # Solution + complexity-annotated header
 │               └── test_solution.py   # Examples + edge cases
-├── research/            # Research notes — AI/ML, DeFi, quantitative analysis,
-│                        #   strategy development, math, macro economics, game theory
+├── research/            # Research notes — AI/ML, DeFi, quantitative analysis, strategy
+│                        #   development, math, macro economics, game theory, poker
+├── books/               # Reading notes by shelf (fiction, non-fiction)
 ├── docs/                # MkDocs Material site sources (include-markdown stubs)
 ├── .github/workflows/   # CI (lint + tests), docs deploy, tag-based releases
 ├── mkdocs.yml           # Documentation site configuration

@@ -10,4 +10,3 @@ numerical), and information theory.
 [`../quantitative-analysis/`](../quantitative-analysis/).
 
 > Lead each note with the question or theorem it addresses. Use `$...$` / `$$...$$` for math.
-</content>

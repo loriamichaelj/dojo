@@ -10,4 +10,3 @@ mechanism design and MEV ([`../defi/`](../defi/)), and multi-agent AI
 ([`../ai/`](../ai/)).
 
 > When modeling a game, state players, actions, payoffs, and information up front.
-</content>

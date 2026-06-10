@@ -25,6 +25,7 @@ TOPIC_ORDER = [
     "math",
     "game-theory",
     "macro-economics",
+    "poker",
 ]
 
 H1_RE = re.compile(r"^#\s+(.+?)\s*$", re.MULTILINE)

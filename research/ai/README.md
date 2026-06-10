@@ -11,4 +11,3 @@ validation discipline) and [`../strategy-development/`](../strategy-development/
 
 > Be explicit about train/validation/test splits and leakage — the same rigor as
 > backtesting applies.
-</content>

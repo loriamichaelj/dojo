@@ -12,4 +12,3 @@ real strategies: transaction costs, capacity, regime shifts, and overfitting.
 
 > Each strategy note should state the hypothesis, the edge's economic rationale, and how
 > it was stress-tested — not just the backtest curve.
-</content>

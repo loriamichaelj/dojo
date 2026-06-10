@@ -15,6 +15,7 @@ write-ups that may later graduate into `projects/`.
 | [`defi/`](./defi/) | AMMs, lending, MEV, on-chain microstructure, protocol/tokenomics analysis |
 | [`ai/`](./ai/) | ML/DL, RL, LLMs, and their application to research and strategy |
 | [`macro-economics/`](./macro-economics/) | Monetary policy, rates, FX, business cycles, cross-asset regimes |
+| [`poker/`](./poker/) | Imperfect-information games — equity/pot odds, GTO/Nash, exploitative play, bankroll |
 | [`strategy-development/`](./strategy-development/) | Idea → hypothesis → backtest → risk → execution; turning the above into trading strategies |
 
 ## How to use this folder
@@ -37,4 +38,3 @@ duplicating:
 - Where does game theory explain DeFi mechanism failures and MEV? (`game-theory` × `defi`)
 - When does ML beat a well-specified statistical model — and when does it just overfit?
   (`ai` × `quantitative-analysis`)
-</content>

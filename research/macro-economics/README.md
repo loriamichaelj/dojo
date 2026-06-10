@@ -10,4 +10,3 @@ performance.
 in allocation and risk.
 
 > Distinguish structural claims from regime-dependent ones; date any data-driven assertion.
-</content>

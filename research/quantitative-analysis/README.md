@@ -12,4 +12,3 @@ corrections, walk-forward validation).
 
 > Each empirical note should state its data source, sample period, and how the result was
 > validated against overfitting.
-</content>
